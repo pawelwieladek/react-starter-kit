@@ -1,0 +1,42 @@
+{
+  "name": "react-es6-starter-kit",
+  "version": "1.0.0",
+  "description": "React ES6 Starter Kit",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelwieladek/react-es6-starter-kit.git"
+  },
+  "author": "Pawel Wieladek <pawelwieladek@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pawelwieladek/react-es6-starter-kit/issues"
+  },
+  "homepage": "https://github.com/pawelwieladek/react-es6-starter-kit#readme",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "file-loader": "^0.8.5",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.1",
+    "font-awesome": "^4.5.0",
+    "react": "^0.14.3",
+    "react-bootstrap": "^0.28.1",
+    "react-dom": "^0.14.3",
+    "superagent": "^1.6.1"
+  }
+}
