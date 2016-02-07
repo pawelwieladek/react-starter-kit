@@ -9,6 +9,6 @@ export default React.createClass({
             <div className="app">
                 App
             </div>
-        )
+        );
     }
 });
