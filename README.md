@@ -10,6 +10,7 @@
 - Bootstrap
 - Font Awesome icons
 - Less styles
+- Mocha, Sinon, Chai, Enzyme testing libs
 
 ## Usage
 
