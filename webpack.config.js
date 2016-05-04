@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: './client/scripts/main.js',
+    entry: './scripts/main.js',
     output: {
         path: './public/dist',
         publicPath: 'dist/',
