@@ -1,6 +1,6 @@
 # React Starter Kit
 
-<img src="public/images/react.svg" alt="React logo" width="200" />
+<img src="public/images/react-logo.png" alt="React logo" width="200" />
 
 ## Contains
 
@@ -13,18 +13,19 @@
 
 ## Usage
 
-1. Install
+### Install
 
 ```
 npm install
 ```
 
-2. Start
+### Start
 
 ```
 npm start
 ```
 
-3. Open browser at [localhost:8080](http://localhost:8080)
+### Open browser
+[localhost:8080](http://localhost:8080)
 
-Have fun!
+### Have fun!
