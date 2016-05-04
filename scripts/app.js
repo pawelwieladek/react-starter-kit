@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-import styles from '../styles/styles.less';
-
-export default React.createClass({
-    displayName: 'App',
+export class App extends Component {
     render() {
         return (
             <div className="app">
@@ -11,4 +8,4 @@ export default React.createClass({
             </div>
         );
     }
-});
+}
