@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 export class Counter extends Component {
     constructor(props) {
@@ -16,13 +16,13 @@ export class Counter extends Component {
         initialValue: 0
     };
 
-    increment = () => {
+    increment() {
         this.setState({
             value: this.state.value + 1
         });
     };
 
-    reset = () => {
+    reset() {
         this.setState({
             value: this.props.initialValue
         });
@@ -32,8 +32,8 @@ export class Counter extends Component {
         return (
             <div>
                 <h1 ref="value">{this.state.value}</h1>
-                <button ref="increment" onClick={this.increment}>Increment</button>
-                <button ref="reset" onClick={this.reset}>Reset</button>
+                <button ref="increment" onClick={() => this.increment()}>Increment</button>
+                <button ref="reset" onClick={() => this.reset()}>Reset</button>
             </div>
         );
     }

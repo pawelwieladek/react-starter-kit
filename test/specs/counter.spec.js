@@ -14,34 +14,34 @@ describe('<Counter /> should', () => {
 
     it('render initial value', () => {
         const counter = mount(<Counter initialValue={3} />);
-        expect(counter.ref('value').text()).equal('3');
+        expect(counter.find('h1').text()).equal('3');
     });
 
-    it('increment its state', () => {
+    it('increment value', () => {
         const counter = mount(<Counter />);
-        counter.ref('increment').simulate('click');
+        counter.find('button').first().simulate('click');
         expect(counter.state().value).equal(1);
     });
 
-    it('increment its state multiple times', () => {
+    it('increment value multiple times', () => {
         const counter = mount(<Counter />);
         counter.ref('increment').simulate('click');
         counter.ref('increment').simulate('click');
         counter.ref('increment').simulate('click');
-        expect(counter.state().value).equal(3);
+        expect(counter.ref('value').text()).equal('3');
     });
 
-    it('reset its state to default value', () => {
+    it('reset value to default value', () => {
         const counter = mount(<Counter />);
         counter.ref('increment').simulate('click');
         counter.ref('reset').simulate('click');
         expect(counter.state().value).equal(0);
     });
 
-    it('reset its state to initial value', () => {
+    it('reset value to initial value', () => {
         const counter = mount(<Counter initialValue={3} />);
-        counter.ref('increment').simulate('click');
-        counter.ref('reset').simulate('click');
-        expect(counter.state().value).equal(3);
+        counter.find('button').at(0).simulate('click');
+        counter.find('button').at(1).simulate('click');
+        expect(counter.ref('value').text()).equal('3');
     });
 });
