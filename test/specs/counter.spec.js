@@ -1,4 +1,4 @@
-import { Counter } from '../../scripts/counter';
+import { Counter } from '../../scripts/components/Counter';
 
 describe('<Counter /> should', () => {
     it('render header and two buttons', () => {
