@@ -1,3 +1,5 @@
+import { List } from 'immutable';
+
 export const TODOS_REQUEST = 'LOAD_TODOS_REQUEST';
 export const TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS';
 export const TODOS_FAILURE = 'LOAD_TODOS_FAILURE';
@@ -11,7 +13,7 @@ function todosRequest() {
 function todosSuccess(items) {
     return {
         type: TODOS_SUCCESS,
-        items
+        items: List(items)
     };
 }
 

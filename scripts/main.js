@@ -8,15 +8,7 @@ import { configureStore } from './store/configureStore';
 import { rootReducer } from './reducers';
 import { App } from './components/app';
 
-const initialState = {
-    todos: {
-        items: [],
-        isLoading: false,
-        errorMessage: null
-    }
-};
-
-const store = configureStore(initialState);
+const store = configureStore({});
 
 render(
     <Provider store={store}>

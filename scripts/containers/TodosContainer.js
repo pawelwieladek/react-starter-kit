@@ -1,13 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { loadTodos } from '../actions';
+import { loadTodos } from '../actions/todos';
 
 const mapStateToProps = (state) => {
+    const { items, isLoading, errorMessage } = state.todos.toJS();
     return {
-        items: state.todos.items,
-        isLoading: state.todos.isLoading,
-        errorMessage: state.todos.errorMessage
+        items,
+        isLoading,
+        errorMessage
     };
 };
 
