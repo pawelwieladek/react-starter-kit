@@ -2,7 +2,11 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    entry: './scripts/main.js',
+    entry: [
+        'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
+        'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+        './scripts/main.js'
+    ],
     output: {
         path: './public/dist',
         publicPath: 'dist/',
@@ -12,7 +16,7 @@ module.exports = {
         loaders: [
             {
                 test: /.js?$/,
-                loader: 'babel-loader',
+                loaders: ['react-hot', 'babel-loader'],
                 exclude: /node_modules/
             },
             {
@@ -43,7 +47,11 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devServer: {
+        hot: true,
         contentBase: path.join(__dirname, 'public/')
     }
 };
