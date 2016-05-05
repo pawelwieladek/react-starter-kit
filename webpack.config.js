@@ -53,5 +53,6 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: path.join(__dirname, 'public/')
-    }
+    },
+    devtool: 'source-map'
 };
