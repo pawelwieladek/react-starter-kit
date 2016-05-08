@@ -4,26 +4,6 @@ export const TODOS_REQUEST = 'TODOS_REQUEST';
 export const TODOS_SUCCESS = 'TODOS_SUCCESS';
 export const TODOS_FAILURE = 'TODOS_FAILURE';
 
-function todosRequest() {
-    return {
-        type: TODOS_REQUEST
-    };
-}
-
-function todosSuccess(items) {
-    return {
-        type: TODOS_SUCCESS,
-        items: List(items)
-    };
-}
-
-function todosFailure(errorMessage) {
-    return {
-        type: TODOS_FAILURE,
-        errorMessage
-    };
-}
-
 function fetchTodos() {
     return Promise.resolve([
         {
@@ -39,9 +19,17 @@ function fetchTodos() {
 
 export function loadTodos() {
     return dispatch => {
-        dispatch(todosRequest());
+        dispatch({
+            type: TODOS_REQUEST
+        });
         fetchTodos()
-            .then(items => dispatch(todosSuccess(items)))
-            .catch(error => dispatch(todosFailure(error.message)));
+            .then(items => dispatch({
+                type: TODOS_SUCCESS,
+                items: List(items)
+            }))
+            .catch(error => dispatch({
+                type: TODOS_FAILURE,
+                error: error.message
+            }));
     }
 }
