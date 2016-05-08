@@ -1,8 +1,8 @@
 import { List } from 'immutable';
 
-export const TODOS_REQUEST = 'LOAD_TODOS_REQUEST';
-export const TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS';
-export const TODOS_FAILURE = 'LOAD_TODOS_FAILURE';
+export const TODOS_REQUEST = 'TODOS_REQUEST';
+export const TODOS_SUCCESS = 'TODOS_SUCCESS';
+export const TODOS_FAILURE = 'TODOS_FAILURE';
 
 function todosRequest() {
     return {
