@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export class Counter extends Component {
+export class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
